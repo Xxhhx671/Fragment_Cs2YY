@@ -1,0 +1,22 @@
+{
+  "name": "fragment-cs2",
+  "version": "1.0.0",
+  "description": "Fragment CS2 - Чит для Counter-Strike 2 в разработке. Бета-тестирование",
+  "main": "index.html",
+  "scripts": {
+    "start": "Откройте index.html в браузере"
+  },
+  "keywords": [
+    "CS2",
+    "Counter-Strike 2",
+    "Beta",
+    "Chat",
+    "Gaming"
+  ],
+  "author": "Fragment Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
