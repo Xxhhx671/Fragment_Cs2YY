@@ -1,24 +1,14 @@
 {
   "name": "fragment-cs2",
   "version": "1.0.0",
-  "description": "Fragment CS2 - Чит для Counter-Strike 2 в разработке. Бета-тестирование",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "echo 'Fragment CS2 build complete'",
-    "dev": "node server.js"
+    "start": "node server.js"
   },
-  "keywords": [
-    "CS2",
-    "Counter-Strike 2",
-    "Beta",
-    "Chat",
-    "Gaming"
-  ],
-  "author": "Fragment Team",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": ""
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "ws": "^8.13.0"
   }
 }
