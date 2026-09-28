@@ -4,7 +4,9 @@
   "description": "Fragment CS2 - Чит для Counter-Strike 2 в разработке. Бета-тестирование",
   "main": "index.html",
   "scripts": {
-    "start": "Откройте index.html в браузере"
+    "start": "node server.js",
+    "build": "echo 'Fragment CS2 build complete'",
+    "dev": "node server.js"
   },
   "keywords": [
     "CS2",
