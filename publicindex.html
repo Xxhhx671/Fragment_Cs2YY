@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragment CS2 | Hero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">FRAGMENT <span class="glow-text">CS2</span></div>
+        <nav>
+            <button onclick="showTab('home')" class="active">Главная</button>
+            <button id="nav-profile" onclick="showTab('profile')" style="display:none;">Профиль</button>
+            <button id="nav-chat" onclick="showTab('chat')" style="display:none;">Чаты</button>
+            <button id="nav-login" onclick="showTab('login')">Вход</button>
+            <button id="nav-register" onclick="showTab('register')">Регистрация</button>
+            <button id="nav-logout" onclick="logout()" style="display:none;">Выход</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Главная -->
+        <section id="home" class="tab-content active">
+            <div class="card">
+                <h1>FRAGMENT CS2 | <span class="glow-text">HERO EDITION</span></h1>
+                <p style="margin-top: 15px;">
+                    <strong>Fragment CS2</strong> — чит, который находится в активной разработке.
+                </p>
+                <p style="margin-top: 10px;">
+                    Получите <span class="glow-text">Invite Code</span> у администратора или участвуйте в раздачах, чтобы зарегистрироваться и принять участие в закрытом бета-тестировании.
+                </p>
+                <div style="margin-top: 20px; padding: 10px; background: #08080a; border: 1px dashed #00ff66; color: #888; font-size: 13px;">
+                    Тестовые инвайт-коды для проверки: <br>
+                    <code style="color: #00ff66;">BETA-HERO-2026</code> | <code style="color: #00ff66;">FRAGMENT-TEST-1337</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Регистрация -->
+        <section id="register" class="tab-content">
+            <div class="card form-box">
+                <h2>Регистрация</h2>
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" id="reg-name" required>
+                </div>
+                <div class="input-group">
+                    <label>Invite Code</label>
+                    <input type="text" id="reg-invite" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-pass" required>
+                </div>
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="reg-confirm-pass" required>
+                </div>
+                <div class="input-group">
+                    <label>Referral Code (Friend) [Необязательно]</label>
+                    <input type="text" id="reg-ref">
+                </div>
+                <button class="btn-primary" onclick="register()">Создать аккаунт</button>
+            </div>
+        </section>
+
+        <!-- Вход -->
+        <section id="login" class="tab-content">
+            <div class="card form-box">
+                <h2>Авторизация</h2>
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" id="login-name" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="login-pass" required>
+                </div>
+                <button class="btn-primary" onclick="login()">Войти</button>
+            </div>
+        </section>
+
+        <!-- Профиль -->
+        <section id="profile" class="tab-content">
+            <div class="card">
+                <h2>Личный кабинет</h2>
+                <div style="margin-top: 20px; line-height: 2;">
+                    <p>Имя пользователя: <span id="prof-name" class="glow-text"></span></p>
+                    <p>Статус подписки: <span style="color: #00ff66;">АКТИВНА (Beta Access)</span></p>
+                    <p>Истечение срока подписки Fragment CS2: <span id="prof-sub" style="color: #fff;"></span></p>
+                    <p>Реферал: <span id="prof-ref" style="color: #888;"></span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Чаты -->
+        <section id="chat" class="tab-content">
+            <div class="card chat-container">
+                <div class="chat-search">
+                    <div class="input-group">
+                        <label>Поиск игрока</label>
+                        <input type="text" id="target-user" placeholder="Никнейм...">
+                    </div>
+                    <button class="btn-primary" onclick="startChat()">Открыть чат</button>
+                </div>
+                <div class="chat-main">
+                    <div style="padding: 10px; border-bottom: 1px solid #1c1e24; color: #00ff66; font-weight: bold;" id="chat-with-title">
+                        Выберите игрока
+                    </div>
+                    <div class="chat-messages" id="messages-list"></div>
+                    <div class="chat-input">
+                        <input type="text" id="msg-text" placeholder="Введите сообщение...">
+                        <button onclick="sendMessage()">SEND</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
